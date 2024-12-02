@@ -13,7 +13,7 @@ const ContentComponent = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: flex-start;
-  gap: 2rem;
+  gap: 1.5rem;
 `;
 
 export const Content: FC<ContentProps> = ({ sidebar, body }) => (

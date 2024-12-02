@@ -5,8 +5,8 @@ type LineProps = {
 };
 
 export const Line: FC<LineProps> = ({ children }) => (
-  <>
+  <span>
     {children}
     <br />
-  </>
+  </span>
 );

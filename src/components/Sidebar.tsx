@@ -2,6 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { SidebarSection } from './SidebarSection.tsx';
 import { Line } from './Line.tsx';
+import { Skill } from './Skill.tsx';
 
 const SidebarComponent = styled.div`
   flex: 2;
@@ -57,7 +58,15 @@ export const Sidebar: FC = () => (
       </Line>
     </SidebarSection>
 
-    {/*<SidebarSection headline="skills"></SidebarSection>*/}
+    <SidebarSection headline="skills">
+      <Skill name="TypeScript" levelOutOf3={3} />
+      <Skill name="JavaScript" levelOutOf3={3} />
+      <Skill name="React" levelOutOf3={3} />
+      <Skill name="React&nbsp;Native" levelOutOf3={3} />
+      <Skill name="Kotlin" levelOutOf3={3} />
+      <Skill name="Java" levelOutOf3={3} />
+      <Skill name="SQL" levelOutOf3={2} />
+    </SidebarSection>
 
     <SidebarSection headline="hobbies">
       <Line>cooking</Line>

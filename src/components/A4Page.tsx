@@ -11,6 +11,8 @@ const A4PageComponent = styled.div`
   background: ${({ theme }) => theme.colors.white};
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
   margin: 0 auto;
+  padding: 0 1.75rem;
+  box-sizing: border-box;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
