@@ -1,5 +1,6 @@
 import { FC } from 'react';
 import styled from 'styled-components';
+import { LinkLabel } from './LinkLabel.tsx';
 
 type Link = {
   title: string;
@@ -11,7 +12,7 @@ type BodyItemProps = {
   endYear?: string;
   duration?: string;
   title: string;
-  description: string;
+  description?: string;
   descriptionAddendum?: string;
   links?: Link | Link[];
 };
@@ -22,7 +23,7 @@ const Wrapper = styled.div`
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
-  gap: 0.1rem;
+  gap: 0.3rem;
   ${({ theme }) => theme.typography({ size: 'small' })};
 `;
 
@@ -59,16 +60,13 @@ const TitleComponent = styled.span`
   ${({ theme }) => theme.typography({ weight: 'bold' })};
 `;
 
-const LinkComponent = styled.a`
-  ${({ theme }) => theme.typography({ size: 'xsmall', color: 'lightGray' })};
-`;
-
 const DescriptionComponent = styled.span`
   text-align: start;
 `;
 
 const DescriptionAddendumComponent = styled.span`
-  ${({ theme }) => theme.typography({ style: 'italic', color: 'lightGray' })};
+  ${({ theme }) => theme.typography({ size: 'xsmall', style: 'italic' })};
+  white-space: nowrap;
 `;
 
 export const BodyItem: FC<BodyItemProps> = ({
@@ -82,7 +80,7 @@ export const BodyItem: FC<BodyItemProps> = ({
 }) => (
   <Wrapper>
     <DurationColumn>
-      <span>{`${startYear}${endYear ? `-${endYear}` : ''}`}</span>
+      <span>{`${startYear}${endYear ? `–${endYear}` : ''}`}</span>
       {duration && <DurationComponent>{duration}</DurationComponent>}
     </DurationColumn>
 
@@ -95,7 +93,7 @@ export const BodyItem: FC<BodyItemProps> = ({
             (Array.isArray(links) ? links : [links]).map(
               (link, index, allLinks) => (
                 <>
-                  <LinkComponent href={link.url}>{link.title}</LinkComponent>
+                  <LinkLabel href={link.url}>{link.title}</LinkLabel>
                   {index < allLinks.length - 1 && <span>{', '}</span>}
                 </>
               )
@@ -103,16 +101,18 @@ export const BodyItem: FC<BodyItemProps> = ({
         </span>
       </TitleRow>
 
-      <DescriptionComponent>
-        {description}
+      {description && (
+        <DescriptionComponent>
+          {description}
 
-        {descriptionAddendum && (
-          <>
-            &nbsp;
-            <DescriptionAddendumComponent>{`(${descriptionAddendum})`}</DescriptionAddendumComponent>
-          </>
-        )}
-      </DescriptionComponent>
+          {descriptionAddendum && (
+            <>
+              &nbsp;
+              <DescriptionAddendumComponent>{`(${descriptionAddendum})`}</DescriptionAddendumComponent>
+            </>
+          )}
+        </DescriptionComponent>
+      )}
     </DescriptionColumn>
   </Wrapper>
 );
