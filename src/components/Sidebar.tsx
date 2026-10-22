@@ -65,9 +65,9 @@ export const Sidebar: FC = () => (
       <Skill name="React" levelOutOf3={3} />
       <Skill name="React&nbsp;Native" levelOutOf3={3} />
       <Skill name="Expo" levelOutOf3={3} />
-      <Skill name="Kotlin" levelOutOf3={3} />
-      <Skill name="Java" levelOutOf3={3} />
-      <Skill name="SQL" levelOutOf3={2} />
+      <Skill name="Kotlin" levelOutOf3={3} lastUsed="2023" />
+      <Skill name="Java" levelOutOf3={3} lastUsed="2023" />
+      <Skill name="SQL" levelOutOf3={2} lastUsed="2023" />
     </SidebarSection>
 
     <SidebarSection headline="education">
