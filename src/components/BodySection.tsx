@@ -15,7 +15,7 @@ const BodySectionComponent = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  gap: 0.5rem;
+  gap: 0.75rem;
 `;
 
 const BodyHeadline = styled.span`

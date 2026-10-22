@@ -3,6 +3,7 @@ import styled from 'styled-components';
 import { SidebarSection } from './SidebarSection.tsx';
 import { Line } from './Line.tsx';
 import { Skill } from './Skill.tsx';
+import { Degree } from './Degree.tsx';
 
 const SidebarComponent = styled.div`
   flex: 2;
@@ -67,6 +68,36 @@ export const Sidebar: FC = () => (
       <Skill name="Kotlin" levelOutOf3={3} />
       <Skill name="Java" levelOutOf3={3} />
       <Skill name="SQL" levelOutOf3={2} />
+    </SidebarSection>
+
+    <SidebarSection headline="education">
+      <Degree
+        startYear="2017"
+        endYear="2020"
+        title="Master's Degree"
+        field="Computer Science"
+        school="Masaryk University"
+        url="https://is.muni.cz/obory/3148?fakulta=1433;lang=en;setlang=en"
+      />
+      <Line />
+
+      <Degree
+        startYear="2018"
+        title="Erasmus+"
+        field="CS & Management"
+        school="University of Pavia"
+        url="https://portale.unipv.it/en"
+      />
+      <Line />
+
+      <Degree
+        startYear="2014"
+        endYear="2017"
+        title="Bachelor's Degree"
+        field="Computer Science"
+        school="Masaryk University"
+        url="https://is.muni.cz/obory/3142?fakulta=1433;lang=en;setlang=en"
+      />
     </SidebarSection>
 
     <SidebarSection headline="hobbies">

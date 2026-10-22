@@ -115,41 +115,7 @@ export const Body: FC = () => (
       />
     </BodySection>
 
-    <BodySection headline="education" headlineEmphasisColor="pink">
-      <BodyItem
-        startYear="2017"
-        endYear="2020"
-        title="Master's Degree"
-        description="Computer Science"
-        links={{
-          title: 'Faculty of Informatics, Masaryk University in Brno',
-          url: 'https://is.muni.cz/obory/3148?fakulta=1433;lang=en;setlang=en',
-        }}
-      />
-
-      {/*<BodyItem*/}
-      {/*  startYear="2018"*/}
-      {/*  title="Erasmus+ Exchange"*/}
-      {/*  description="Computer Science and Management"*/}
-      {/*  links={{*/}
-      {/*    title: 'University of Pavia',*/}
-      {/*    url: 'http://www.unipv.eu/site/en/home.html',*/}
-      {/*  }}*/}
-      {/*/>*/}
-
-      <BodyItem
-        startYear="2014"
-        endYear="2017"
-        title="Bachelor's Degree"
-        description="Computer Science"
-        links={{
-          title: 'Faculty of Informatics, Masaryk University in Brno',
-          url: 'https://is.muni.cz/obory/3142?fakulta=1433;lang=en;setlang=en',
-        }}
-      />
-    </BodySection>
-
-    <BodySection headline="projects" headlineEmphasisColor="green">
+    <BodySection headline="projects" headlineEmphasisColor="pink">
       <BodyItem
         startYear="2022"
         duration="3 months"
