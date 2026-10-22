@@ -5,3 +5,4 @@ export * from './Content.tsx';
 export * from './Sidebar.tsx';
 export * from './SidebarSection.tsx';
 export * from './Body.tsx';
+export * from './DownloadLink.tsx';

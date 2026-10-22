@@ -1,11 +1,20 @@
 import { ThemeProvider } from 'styled-components';
 import { GlobalStyle, THEME } from './styles';
-import { A4Page, Content, Headline, Sidebar, Body } from './components';
+import {
+  A4Page,
+  Content,
+  Headline,
+  Sidebar,
+  Body,
+  DownloadLink,
+} from './components';
 
 const App = () => {
   return (
     <ThemeProvider theme={THEME}>
       <GlobalStyle />
+
+      <DownloadLink />
 
       <A4Page>
         <Headline />

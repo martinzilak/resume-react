@@ -17,6 +17,15 @@ const A4PageComponent = styled.div`
   flex-direction: column;
   justify-content: flex-start;
   align-items: center;
+  // The page is laid out in points (595pt = 210mm), browsers use CSS pixels (210mm ≈ 793.7px).
+  // Zooming on screen too keeps the on-screen layout identical to the printed one.
+  zoom: 1.3339;
+
+  @media print {
+    margin: 0;
+    box-shadow: none;
+    overflow: hidden;
+  }
 `;
 
 export const A4Page: FC<A4PageProps> = ({ children }) => (

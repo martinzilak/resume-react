@@ -49,4 +49,20 @@ export const GlobalStyle = createGlobalStyle`
         text-decoration: none;
         color: inherit;
     }
+
+    @page {
+        size: A4;
+        margin: 0;
+    }
+
+    @media print {
+        :root {
+            color-scheme: light;
+            print-color-adjust: exact;
+        }
+
+        body {
+            margin: 0;
+        }
+    }
 `;
