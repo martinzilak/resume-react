@@ -1,13 +1,14 @@
 import { ReactNode, FC } from 'react';
 import styled from 'styled-components';
-import { Line } from './Line.tsx';
 
 type SidebarSectionProps = {
   headline: string;
   children: ReactNode;
 };
 
-const SidebarHeadline = styled.span`
+const SidebarHeadline = styled.h2`
+  margin: 0;
+  font: inherit;
   ${({ theme }) => theme.typography({ size: 'medium', weight: 'bold' })};
 `;
 
@@ -15,10 +16,8 @@ export const SidebarSection: FC<SidebarSectionProps> = ({
   headline,
   children,
 }) => (
-  <span>
-    <Line>
-      <SidebarHeadline>{headline}</SidebarHeadline>
-    </Line>
+  <section>
+    <SidebarHeadline>{headline}</SidebarHeadline>
     {children}
-  </span>
+  </section>
 );

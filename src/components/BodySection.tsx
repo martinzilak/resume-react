@@ -1,6 +1,5 @@
 import { ReactNode, FC } from 'react';
 import styled from 'styled-components';
-import { Line } from './Line.tsx';
 import { FontColor } from '../styles';
 
 type BodySectionProps = {
@@ -10,12 +9,17 @@ type BodySectionProps = {
   children: ReactNode;
 };
 
-const BodySectionComponent = styled.div`
+const BodySectionComponent = styled.section`
   align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   gap: 0.75rem;
+`;
+
+const SectionHeadline = styled.h2`
+  margin: 0;
+  font: inherit;
 `;
 
 const BodyHeadline = styled.span`
@@ -33,14 +37,14 @@ export const BodySection: FC<BodySectionProps> = ({
   children,
 }) => (
   <BodySectionComponent>
-    <Line>
+    <SectionHeadline>
       <EmphasizedBodyHeadlinePart color={headlineEmphasisColor}>
         {headline.slice(0, headlineEmphasisLengthFromStart)}
       </EmphasizedBodyHeadlinePart>
       <BodyHeadline>
         {headline.slice(headlineEmphasisLengthFromStart, headline.length)}
       </BodyHeadline>
-    </Line>
+    </SectionHeadline>
 
     {children}
   </BodySectionComponent>

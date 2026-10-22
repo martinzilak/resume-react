@@ -5,7 +5,7 @@ import { Line } from './Line.tsx';
 import { Skill } from './Skill.tsx';
 import { Degree } from './Degree.tsx';
 
-const SidebarComponent = styled.div`
+const SidebarComponent = styled.aside`
   flex: 2;
   display: flex;
   flex-direction: column;

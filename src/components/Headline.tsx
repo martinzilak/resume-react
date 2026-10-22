@@ -2,7 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { HeadlineBoldFont, HeadlineRegularFont } from '../assets/fonts';
 
-const HeadlineComponent = styled.div`
+const HeadlineComponent = styled.h1`
   @font-face {
     font-family: 'Lato';
     src: url(${HeadlineRegularFont}) format('truetype');
@@ -24,7 +24,9 @@ const HeadlineComponent = styled.div`
   flex-direction: row;
   justify-content: center;
   align-items: center;
+  margin: 0;
   padding: 1.25rem 1rem 1rem;
+  font-weight: normal;
   ${({ theme }) => theme.typography({ size: 'xlarge' })};
 `;
 

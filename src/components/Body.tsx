@@ -3,7 +3,7 @@ import styled from 'styled-components';
 import { BodySection } from './BodySection.tsx';
 import { BodyItem } from './BodyItem.tsx';
 
-const BodyComponent = styled.div`
+const BodyComponent = styled.main`
   flex: 9;
   display: flex;
   flex-direction: column;

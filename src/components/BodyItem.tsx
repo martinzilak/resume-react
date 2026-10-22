@@ -56,7 +56,9 @@ const DurationComponent = styled.span`
   ${({ theme }) => theme.typography({ size: 'xsmall', style: 'italic' })};
 `;
 
-const TitleComponent = styled.span`
+const TitleComponent = styled.h3`
+  margin: 0;
+  font: inherit;
   ${({ theme }) => theme.typography({ weight: 'bold' })};
 `;
 
