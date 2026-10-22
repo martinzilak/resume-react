@@ -17,11 +17,22 @@ export const Body: FC = () => (
   <BodyComponent>
     <BodySection headline="experience" headlineEmphasisColor="blue">
       <BodyItem
+        startYear="2025"
+        endYear="2026"
+        duration="12 months"
+        title="Mobile Team Leader"
+        description="Allocating resources, reviewing code, overseeing releases, architecting new internal libraries."
+        descriptionAddendum="Leading a team of 4"
+        links={{ title: 'Sensoneo', url: 'https://sensoneo.com/' }}
+      />
+
+      <BodyItem
         startYear="2023"
-        endYear="now"
-        duration="since August"
-        title="Senior Front-end Software Engineer"
-        description="Developing B2B and B2C deposit-return system management applications for Web & Mobile in React & React Native."
+        endYear="2025"
+        duration="26 months"
+        title="Senior Mobile Software Engineer"
+        description="Bringing 15 deposit-return apps from concept to the stores in React Native & Expo, owning development, native modules, builds, releases and tester groups."
+        descriptionAddendum="600K+ downloads"
         links={{ title: 'Sensoneo', url: 'https://sensoneo.com/' }}
       />
 
@@ -29,7 +40,7 @@ export const Body: FC = () => (
         startYear="2023"
         duration="4 months"
         title="Senior Full-stack Software Engineer"
-        description="Designing and developing car rental software product for Web & Mobile in Kotlin & React."
+        description="Designing and developing a car rental software product for Web & Mobile in Kotlin & React."
         links={{ title: 'Swapp', url: 'https://joinswapp.com' }}
       />
 
@@ -38,7 +49,7 @@ export const Body: FC = () => (
         endYear="2023"
         duration="22 months"
         title="Full-stack Software Engineer"
-        description="Designing and developing full-stack health insurance software product in Kotlin & React."
+        description="Designing and developing a full-stack health insurance software product in Kotlin & React."
         links={{ title: 'Itera', url: 'https://www.itera.com' }}
       />
 
@@ -47,7 +58,7 @@ export const Body: FC = () => (
         endYear="2021"
         duration="14 months"
         title="Front-end Software Engineer"
-        description="Designing and developing front-end software product in React."
+        description="Designing and developing a cotton mill management system in React, deployed separately for each mill, letting users configure machines (carding, winding…) and their order in production."
         links={{
           title: 'ARTIN Solutions',
           url: 'https://www.artinsolutions.com',
@@ -59,7 +70,7 @@ export const Body: FC = () => (
         endYear="2020"
         duration="6 months"
         title="Project & Team Technical Leader"
-        description="Analysing end user requests, designing tasks, developing features, reviewing code, deploying new versions of product."
+        description="Analysing end user requests, designing tasks, developing features, reviewing code, deploying new releases."
         descriptionAddendum="Leading a team of 7"
         links={{
           title: 'ARTIN',
@@ -72,7 +83,7 @@ export const Body: FC = () => (
         endYear="2019"
         duration="14 months"
         title="Full-stack Software Engineer"
-        description="Designing and developing internal business requirements management software in Java, Kotlin, AngularJS and Vue.js."
+        description="Designing and developing internal business requirements management software in Java, Kotlin, AngularJS & Vue.js."
         links={{
           title: 'ARTIN',
           url: 'https://artin.eu',
@@ -84,7 +95,7 @@ export const Body: FC = () => (
         endYear="2018"
         duration="8 months"
         title="Software Developer"
-        description="Building a metadata editor for digital libraries in Java & Angular 4."
+        description="Building a metadata editor for digital libraries in Java & Angular."
         links={{
           title: 'Institute of Computer Science MU',
           url: 'https://is.muni.cz/lide/pracoviste?lang=en;zobrazid=14920240',
@@ -96,7 +107,7 @@ export const Body: FC = () => (
         endYear="2016"
         duration="10 months"
         title="QA Engineer"
-        description="Writing functionality and unit tests for Business Central web application in Java & Selenium."
+        description="Writing functional and unit tests for the Business Central web application in Java & Selenium."
         links={{
           title: 'Red Hat',
           url: 'http://www.redhat.com/en',
@@ -143,7 +154,7 @@ export const Body: FC = () => (
         startYear="2022"
         duration="3 months"
         title="Interactive Career Quiz"
-        description="An interactive career quiz application supporting 40+ languages, featuring multimedia content and advanced animations. Built in React using GSAP 3."
+        description="An interactive career quiz application supporting 40+ languages, featuring multimedia content and advanced animations. Built in React using GSAP."
         descriptionAddendum="Team of 2"
         links={[
           {
@@ -162,7 +173,7 @@ export const Body: FC = () => (
         endYear="2022"
         duration="3 months"
         title="B2B Website"
-        description="A B2B website featuring several pages with custom components and a blog based on user requirements and provided designs. Built in React & Next.js."
+        description="A multi-page B2B website with custom components and a blog, built to client requirements and designs in React & Next.js."
         links={[
           {
             title: 'Dutchie',
@@ -179,17 +190,11 @@ export const Body: FC = () => (
         startYear="2021"
         duration="3 months"
         title="Hivesweeper"
-        description="Mobile game expanding the idea of classic mine sweeping into a hexagonal grid, with a bee theme. Built in React Native, deployed to Apple App Store."
-        links={[
-          {
-            title: 'Website',
-            url: 'https://hivesweeper.zilak.sk',
-          },
-          {
-            title: 'App Store',
-            url: 'https://apps.apple.com/us/app/hivesweeper/id1581731994',
-          },
-        ]}
+        description="A bee-themed mobile game taking classic Minesweeper to a hexagonal grid. Built in React Native, deployed to the App Store."
+        links={{
+          title: 'Website',
+          url: 'https://hivesweeper.zilak.sk',
+        }}
       />
     </BodySection>
   </BodyComponent>
