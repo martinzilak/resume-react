@@ -18,13 +18,13 @@ const HeadlineComponent = styled.div`
   }
 
   font-family: 'Lato', Arial, sans-serif;
-  flex: 1;
+  flex: none;
   align-self: stretch;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 1.25rem 1rem 1rem;
   ${({ theme }) => theme.typography({ size: 'xlarge' })};
 `;
 

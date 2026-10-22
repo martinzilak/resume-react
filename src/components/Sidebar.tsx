@@ -7,7 +7,6 @@ import { Degree } from './Degree.tsx';
 
 const SidebarComponent = styled.div`
   flex: 2;
-  align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
@@ -15,6 +14,10 @@ const SidebarComponent = styled.div`
   gap: 1rem;
   text-align: end;
   ${({ theme }) => theme.typography({ size: 'small' })};
+`;
+
+const NoWrap = styled.span`
+  white-space: nowrap;
 `;
 
 const LanguageName = styled.span`
@@ -34,7 +37,9 @@ export const Sidebar: FC = () => (
       <Line>Slovakia</Line>
       <Line />
       <Line>
-        <a href="tel:+421948484490">+421 948 484 490</a>
+        <NoWrap>
+          <a href="tel:+421948484490">+421 948 484 490</a>
+        </NoWrap>
       </Line>
       <Line />
       <Line>

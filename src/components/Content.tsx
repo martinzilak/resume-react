@@ -12,7 +12,8 @@ const ContentComponent = styled.div`
   display: flex;
   flex-direction: row;
   justify-content: center;
-  align-items: flex-start;
+  // Aligns the first headings of the sidebar and the body optically, despite their different sizes.
+  align-items: baseline;
   gap: 1.5rem;
 `;
 

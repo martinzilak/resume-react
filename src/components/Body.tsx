@@ -5,7 +5,6 @@ import { BodyItem } from './BodyItem.tsx';
 
 const BodyComponent = styled.div`
   flex: 9;
-  align-self: stretch;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
