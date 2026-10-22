@@ -9,28 +9,28 @@ import {
 export const GlobalStyle = createGlobalStyle`
     @font-face {
         font-family: 'TexGyreHeros';
-        src: url(${RegularFont}) format('opentype');
+        src: url(${RegularFont}) format('truetype');
         font-weight: normal;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'TexGyreHeros';
-        src: url(${BoldFont}) format('opentype');
+        src: url(${BoldFont}) format('truetype');
         font-weight: bold;
         font-style: normal;
     }
 
     @font-face {
         font-family: 'TexGyreHeros';
-        src: url(${ItalicFont}) format('opentype');
+        src: url(${ItalicFont}) format('truetype');
         font-weight: normal;
         font-style: italic;
     }
 
     @font-face {
         font-family: 'TexGyreHeros';
-        src: url(${BoldItalicFont}) format('opentype');
+        src: url(${BoldItalicFont}) format('truetype');
         font-weight: bold;
         font-style: italic;
     }
