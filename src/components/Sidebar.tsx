@@ -73,6 +73,7 @@ export const Sidebar: FC = () => (
       <Skill name="Kotlin" levelOutOf3={3} lastUsed="2023" />
       <Skill name="Java" levelOutOf3={3} lastUsed="2023" />
       <Skill name="SQL" levelOutOf3={2} lastUsed="2023" />
+      <Skill name="Python" levelOutOf3={1} lastUsed="2023" />
     </SidebarSection>
 
     <SidebarSection headline="education">
