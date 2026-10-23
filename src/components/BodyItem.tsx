@@ -1,4 +1,4 @@
-import { FC } from 'react';
+import { FC, Fragment } from 'react';
 import styled from 'styled-components';
 import { LinkLabel } from './LinkLabel.tsx';
 
@@ -94,10 +94,10 @@ export const BodyItem: FC<BodyItemProps> = ({
           {links &&
             (Array.isArray(links) ? links : [links]).map(
               (link, index, allLinks) => (
-                <>
+                <Fragment key={link.url}>
                   <LinkLabel href={link.url}>{link.title}</LinkLabel>
                   {index < allLinks.length - 1 && <span>{', '}</span>}
-                </>
+                </Fragment>
               )
             )}
         </span>
