@@ -8,6 +8,7 @@ import {
   Body,
   DownloadLink,
 } from './components';
+import { resume } from './data';
 
 const App = () => {
   return (
@@ -17,9 +18,12 @@ const App = () => {
       <DownloadLink />
 
       <A4Page>
-        <Headline />
+        <Headline {...resume.name} />
 
-        <Content sidebar={<Sidebar />} body={<Body />} />
+        <Content
+          sidebar={<Sidebar {...resume} />}
+          body={<Body {...resume} />}
+        />
       </A4Page>
     </ThemeProvider>
   );

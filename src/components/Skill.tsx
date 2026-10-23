@@ -1,12 +1,11 @@
 import { FC, useId } from 'react';
 import { Line } from './Line.tsx';
 import styled from 'styled-components';
+import { Skill as SkillProps } from '../data';
 
-type SkillProps = {
-  name: string;
-  levelOutOf3: number;
-  lastUsed?: string;
-};
+const Name = styled.span`
+  white-space: nowrap;
+`;
 
 const Stars = styled.span`
   white-space: nowrap;
@@ -55,15 +54,15 @@ const LastUsed = styled.span`
   ${({ theme }) => theme.typography({ size: 'xsmall', style: 'italic' })};
 `;
 
-const showSkillLevel = (levelOutOf3: number) =>
-  [0, 1, 2].map((index) => <Star key={index} filled={index < levelOutOf3} />);
+const showSkillLevel = (level: number) =>
+  [0, 1, 2].map((index) => <Star key={index} filled={index < level} />);
 
-export const Skill: FC<SkillProps> = ({ name, levelOutOf3, lastUsed }) => (
+export const Skill: FC<SkillProps> = ({ name, level, lastUsed }) => (
   <Line>
     {lastUsed && <LastUsed>{lastUsed}&nbsp;</LastUsed>}
-    {name}&nbsp;
-    <Stars role="img" aria-label={`${levelOutOf3} out of 3`}>
-      {showSkillLevel(levelOutOf3)}
+    <Name>{name}</Name>&nbsp;
+    <Stars role="img" aria-label={`${level} out of 3`}>
+      {showSkillLevel(level)}
     </Stars>
   </Line>
 );

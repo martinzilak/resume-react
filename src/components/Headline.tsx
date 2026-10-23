@@ -1,6 +1,11 @@
 import { FC } from 'react';
 import styled from 'styled-components';
 import { HeadlineBoldFont, HeadlineRegularFont } from '../assets/fonts';
+import { Resume } from '../data';
+
+type HeadlineProps = Resume['name'] & {
+  emphasisLength?: number;
+};
 
 const HeadlineComponent = styled.h1`
   @font-face {
@@ -38,10 +43,14 @@ const BoldOrange = styled(Bold)`
   ${({ theme }) => theme.typography({ color: 'orange' })};
 `;
 
-export const Headline: FC = () => (
+export const Headline: FC<HeadlineProps> = ({
+  first,
+  last,
+  emphasisLength = 2,
+}) => (
   <HeadlineComponent>
-    <span>Martin&nbsp;</span>
-    <BoldOrange>Ži</BoldOrange>
-    <Bold>lák</Bold>
+    <span>{first}&nbsp;</span>
+    <BoldOrange>{last.slice(0, emphasisLength)}</BoldOrange>
+    <Bold>{last.slice(emphasisLength)}</Bold>
   </HeadlineComponent>
 );

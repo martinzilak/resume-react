@@ -2,15 +2,7 @@ import { FC } from 'react';
 import styled from 'styled-components';
 import { Line } from './Line.tsx';
 import { LinkLabel } from './LinkLabel.tsx';
-
-type DegreeProps = {
-  startYear: string;
-  endYear?: string;
-  title: string;
-  field: string;
-  school: string;
-  url: string;
-};
+import { Degree as DegreeProps } from '../data';
 
 const Title = styled.h3`
   margin: 0;

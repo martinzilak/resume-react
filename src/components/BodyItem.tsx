@@ -1,21 +1,7 @@
 import { FC, Fragment } from 'react';
 import styled from 'styled-components';
 import { LinkLabel } from './LinkLabel.tsx';
-
-type Link = {
-  title: string;
-  url: string;
-};
-
-type BodyItemProps = {
-  startYear: string;
-  endYear?: string;
-  duration?: string;
-  title: string;
-  description?: string;
-  descriptionAddendum?: string;
-  links?: Link | Link[];
-};
+import { Entry as BodyItemProps } from '../data';
 
 const Wrapper = styled.div`
   align-self: stretch;
@@ -66,7 +52,7 @@ const DescriptionComponent = styled.span`
   text-align: start;
 `;
 
-const DescriptionAddendumComponent = styled.span`
+const NoteComponent = styled.span`
   ${({ theme }) => theme.typography({ size: 'xsmall', style: 'italic' })};
   white-space: nowrap;
 `;
@@ -77,7 +63,7 @@ export const BodyItem: FC<BodyItemProps> = ({
   duration,
   title,
   description,
-  descriptionAddendum,
+  note,
   links,
 }) => (
   <Wrapper>
@@ -91,15 +77,12 @@ export const BodyItem: FC<BodyItemProps> = ({
         <TitleComponent>{title}</TitleComponent>
 
         <span>
-          {links &&
-            (Array.isArray(links) ? links : [links]).map(
-              (link, index, allLinks) => (
-                <Fragment key={link.url}>
-                  <LinkLabel href={link.url}>{link.title}</LinkLabel>
-                  {index < allLinks.length - 1 && <span>{', '}</span>}
-                </Fragment>
-              )
-            )}
+          {links.map((link, index) => (
+            <Fragment key={link.url}>
+              <LinkLabel href={link.url}>{link.title}</LinkLabel>
+              {index < links.length - 1 && <span>{', '}</span>}
+            </Fragment>
+          ))}
         </span>
       </TitleRow>
 
@@ -107,10 +90,10 @@ export const BodyItem: FC<BodyItemProps> = ({
         <DescriptionComponent>
           {description}
 
-          {descriptionAddendum && (
+          {note && (
             <>
               &nbsp;
-              <DescriptionAddendumComponent>{`(${descriptionAddendum})`}</DescriptionAddendumComponent>
+              <NoteComponent>{`(${note})`}</NoteComponent>
             </>
           )}
         </DescriptionComponent>
